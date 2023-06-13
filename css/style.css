@@ -1,0 +1,123 @@
+@import url("animate.css");
+:root {
+  --brown: #6c584c;
+  --cafe: #a98467;
+  --green: #adc178;
+  --light-green: #dde5b6;
+  --beige: #f0ead2;
+}
+.navbar {
+  background-color: var(--brown);
+}
+.navbar a {
+  color: var(--beige);
+}
+.navbar .nav-item:hover .nav-link,
+.navbar .nav-item .nav-link:focus {
+  color: var(--light-green);
+}
+.navbar .navbar-toggler {
+  box-shadow: none;
+}
+.navbar .navbar-toggler:focus,
+.navbar .navbar-toggler:hover {
+  box-shadow: none;
+}
+/* start hero section */
+.hero {
+  background-color: var(--beige);
+}
+.hero .text h1 span {
+  color: var(--green);
+}
+.hero .text p {
+  color: var(--cafe);
+}
+.custom-btn {
+  background-color: var(--green);
+  border: none;
+  color: var(--beige);
+}
+.custom-btn:hover,
+.custom-btn:focus {
+  background-color: var(--cafe);
+  color: var(--green);
+  box-shadow: none;
+}
+/* sections heading */
+.heading .title {
+  color: var(--brown);
+}
+.heading p {
+  color: var(--cafe);
+}
+/* projects section */
+.projects {
+  background-color: var(--light-green);
+}
+.projects .card {
+  transition: 0.5s;
+}
+.projects .card h5 {
+  color: var(--green);
+}
+.projects .card .custom-btn {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  transition: 0.5s;
+  opacity: 0;
+}
+.projects .card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  background-color: #6c584cd6;
+  width: 100%;
+  height: 100%;
+  transition: 0.3s;
+}
+.projects .card:hover::after {
+  left: 0;
+}
+.projects .card:hover .custom-btn {
+  opacity: 1;
+}
+.skills .icon {
+  background-color: var(--light-green);
+  width: 100px;
+  height: 100px;
+}
+.skills .icon svg {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* animation part */
+.skills .icon:hover {
+  animation: anti-wiggle 1s ease-in-out;
+}
+
+@keyframes anti-wiggle {
+  20% {
+    transform: translateX(4px) rotate(-7deg);
+  }
+
+  40% {
+    transform: translateX(-8px) rotate(14deg);
+  }
+
+  60% {
+    transform: translateX(2px) rotate(-4deg);
+  }
+
+  80% {
+    transform: translateX(-1px) rotate(2deg);
+  }
+
+  100% {
+    transform: translateX(0px) rotate(0deg);
+  }
+}
