@@ -121,3 +121,40 @@
     transform: translateX(0px) rotate(0deg);
   }
 }
+/* start contact section */
+.contact h5 {
+  color: var(--green);
+}
+.contact a {
+  color: var(--brown);
+}
+/* start footer */
+footer {
+  background-color: var(--brown);
+  color: var(--beige);
+}
+footer span {
+  color: var(--green);
+}
+footer a,
+footer a:hover,
+footer a:focus {
+  color: var(--green);
+}
+footer a {
+  animation: updown 2s ease infinite;
+}
+/* animation for up arrow */
+@keyframes updown {
+  0% {
+    transform: translateY(-10%);
+  }
+
+  50% {
+    transform: translateY(10%);
+  }
+
+  100% {
+    transform: translateY(-10%);
+  }
+}
